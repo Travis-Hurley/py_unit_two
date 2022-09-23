@@ -4,8 +4,21 @@ hundred_division=decimized_value//100
 hundred_remainder= round(decimized_value%100,2)
 if hundred_remainder > 50:
     fifty_division=hundred_remainder//50
-    fifty_remainder=round(hundred_remainder%50,2)
-if fifty_remainder > 10:
-    ten_dividion=fifty_remainder//10
-    ten_remainder=round(fifty_remainder%10,2)
-print(ten_dividion,ten_remainder)
+    fifty_r = round(hundred_remainder % 50, 2)
+if fifty_r > 10:
+    ten_dividion = fifty_r//10
+    ten_r= round(fifty_r%10,2)
+if ten_r>5:
+    five_d=ten_r//5
+    five_r=round(ten_r%5,2)
+if five_r>1:
+    one_d=five_r//1
+    one_r=round(five_r%1,2)
+if one_r>0.25:
+    quarter_d=one_r//0.25
+    quarter_r=round(one_r%0.25,2)
+if quarter_r>0.10:
+    dime_d=quarter_r//0.10
+    dime_r=round(quarter_r%.10,2)
+print(dime_d,dime_r)
+
