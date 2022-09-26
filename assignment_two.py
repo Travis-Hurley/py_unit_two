@@ -1,5 +1,8 @@
 import math
 import turtle
+print("Enter two different 'x' and 'y' points and I will show you the angle they make!")
+understand=input('Cool?')
+print("Glad we are on the same page.")
 value1=input('What is the first x coordinate')
 value2=input('What is the first y coordinate')
 value3=input('What is the second x coordinate')
@@ -12,10 +15,10 @@ slope1=(y2-y1)/(x2-x1)
 slope2=(y1-0)/(x1-0)
 angle=math.atan((slope2-slope1)/1+(slope1*slope2))
 angle_degrees= angle*180/math.pi
-9
+
 print(abs(angle_degrees))
 
 turtle.goto(x1,y1)
 turtle.goto(x2,y2)
-
+turtle.write(abs(angle_degrees))
 turtle.exitonclick()
