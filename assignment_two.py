@@ -12,11 +12,14 @@ y1=int(value2)
 x2=int(value3)
 y2=int(value4)
 slope1=(y2-y1)/(x2-x1)
-slope2=(y1-0)/(x1-0)
-angle=math.atan((slope2-slope1)/1+(slope1*slope2))
+slope2=(y1)/(x1+1)
+if slope1>slope2:
+    angle = math.atan((slope1 - slope2) / 1 + (slope1 * slope2))
+if slope2>slope1:
+    angle = math.atan((slope2-slope1) / 1 + (slope1 * slope2))
 angle_degrees= angle*180/math.pi
-
-print(abs(angle_degrees))
+round(angle_degrees)
+print('Your angle is',abs(angle_degrees))
 
 turtle.goto(x1,y1)
 turtle.goto(x2,y2)
